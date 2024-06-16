@@ -1,0 +1,32 @@
+[core]
+	excludesfile = ~/.gitignore_global
+	autocrlf = input
+	editor = open -a 'Sublime Text' --wait
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[color]
+	ui = true
+[commit]
+	template = /Users/kn/.stCommitMsg
+#
+# Different Git configuration per directory
+#
+[includeIf "gitdir:~/PhpstormProjects/github/"]
+    path = ~/.gitconfig-github
+[includeIf "gitdir:~/PhpstormProjects/meritoo/"]
+    path = ~/.gitconfig-meritoo
+[includeIf "gitdir:~/PhpstormProjects/polcode/"]
+    path = ~/.gitconfig-polcode
+[includeIf "gitdir:~/WebstormProjects/polcode/"]
+    path = ~/.gitconfig-polcode
+[includeIf "gitdir:~/WebstormProjects/github/"]
+    path = ~/.gitconfig-github
+[alias]
+	#
+	# Better Git Branch output
+	# Source: https://gist.github.com/schacon/e9e743dee2e92db9a464619b99e94eff
+	#
+	bb = !/usr/local/gist/schacon/better-git-branch.sh
