@@ -22,6 +22,8 @@
     path = ~/.gitconfig-polcode
 [includeIf "gitdir:~/WebstormProjects/polcode/"]
     path = ~/.gitconfig-polcode
+[includeIf "gitdir:~/PycharmProjects/polcode/"]
+    path = ~/.gitconfig-polcode
 [includeIf "gitdir:~/WebstormProjects/github/"]
     path = ~/.gitconfig-github
 [alias]
