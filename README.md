@@ -18,7 +18,6 @@ Read [the blog post](https://niziol.me/2024/05/i-love-dotfiles/) for more detail
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k) - theme for Oh My Zsh
 - [Homebrew](https://brew.sh)
 - [Node.js](https://nodejs.org) and [npm](https://www.npmjs.com)
-- [Mackup](https://github.com/lra/mackup)
 - [mas](https://github.com/mas-cli/mas)
 
 ## Installation
@@ -39,15 +38,6 @@ Read [the blog post](https://niziol.me/2024/05/i-love-dotfiles/) for more detail
     cd ~/.dotfiles && ./install.sh
     ```
 
-3. Restore applications' settings:
-
-    ```bash
-    mackup restore
-    ```
-
-   **Attention.**
-   You need to make a backup first by running `mackup backup` and sync with your cloud storage.
-
 ## Steps of the installation process
 
 1. Installation of `Homebrew`
@@ -55,8 +45,6 @@ Read [the blog post](https://niziol.me/2024/05/i-love-dotfiles/) for more detail
 3. Backup of configuration files from the `$HOME` directory
     - `.zshrc`
     - `.p10k.zsh`
-    - `.mackup/`
-    - `.mackup.cfg`
 4. Update of `Homebrew` and all installed formulae
 5. Installation of dependencies and applications - [Homebrew Bundle](https://github.com/Homebrew/homebrew-bundle)
 6. Installation of applications from Mac App Store - `mas` tool
@@ -105,27 +93,6 @@ mas 'Amphetamine', id: 937984704
 mas 'Bitwarden', id: 1352778147
 # ...
 ```
-
-## Mackup
-
-[Mackup](https://github.com/lra/mackup) is a tool for backing up applications' preferences. See
-[how it works](https://github.com/lra/mackup?tab=readme-ov-file#bullsht-what-does-it-really-do-to-my-files). I decided
-to store backup in iCloud and support all applications except for:
-
-- Iterm2
-- Mackup
-- Powerlevel10k
-- Oh My Zsh
-
-I don't make backups of `Iterm2` preferences because of the following issues:
-
-- [Mackup makes iTerm2 theme disappear](https://github.com/lra/mackup/issues/1916)
-- [Initial backup fails with symlink problems on iterm2](https://github.com/lra/mackup/issues/1925)
-
-Other than that, I rarely use Iterm2. I prefer [Warp](https://www.warp.dev/).
-
-`Mackup`, `Powerlevel10k`, and `Oh My Zsh` preferences are stored in the dotfiles repo, so I don't want to duplicate
-that.
 
 ## Aliases
 

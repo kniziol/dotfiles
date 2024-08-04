@@ -11,7 +11,6 @@ brew 'git'
 brew 'grep'
 brew 'htop'
 brew 'lynx'
-brew 'mackup'
 brew 'mas' # Mac App Store manager
 brew "n"
 brew 'neofetch'

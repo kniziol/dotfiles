@@ -44,8 +44,6 @@ fi
 #
 [ ! -L "$HOME/.zshrc" ] && [ -f "$HOME/.zshrc" ] && mv $HOME/.zshrc $HOME/.zshrc$BACKUP_SUFFIX
 [ ! -L "$HOME/.p10k.zsh" ] && [ -f "$HOME/.p10k.zsh" ] && mv $HOME/.p10k.zsh $HOME/.p10k.zsh$BACKUP_SUFFIX
-[ ! -L "$HOME/.mackup" ] && [ -d "$HOME/.mackup" ] && cp -r $HOME/.mackup $HOME/.mackup$BACKUP_SUFFIX && rm -rf $HOME/.mackup
-[ ! -L "$HOME/.mackup.cfg" ] && [ -f "$HOME/.mackup.cfg" ] && mv $HOME/.mackup.cfg $HOME/.mackup.cfg$BACKUP_SUFFIX
 [ ! -L "$HOME/.gitconfig" ] && [ -f "$HOME/.gitconfig" ] && mv $HOME/.gitconfig $HOME/.gitconfig$BACKUP_SUFFIX
 [ ! -L "$HOME/.gitconfig-github" ] && [ -f "$HOME/.gitconfig-github" ] && mv $HOME/.gitconfig-github $HOME/.gitconfig-github$BACKUP_SUFFIX
 [ ! -L "$HOME/.gitconfig-meritoo" ] && [ -f "$HOME/.gitconfig-meritoo" ] && mv $HOME/.gitconfig-meritoo $HOME/.gitconfig-meritoo$BACKUP_SUFFIX
@@ -58,8 +56,6 @@ print_positive "Created backup of configuration files from the ~/ directory"
 #
 ln -sf $DOTFILES/.zshrc $HOME
 ln -sf $DOTFILES/.p10k.zsh $HOME
-ln -sf $DOTFILES/.mackup $HOME
-ln -sf $DOTFILES/.mackup.cfg $HOME
 ln -sf $DOTFILES/.gitconfig $HOME
 ln -sf $DOTFILES/.gitconfig-github $HOME
 ln -sf $DOTFILES/.gitconfig-meritoo $HOME
