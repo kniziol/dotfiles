@@ -7,13 +7,13 @@ tap 'homebrew/bundle'
 brew 'bash' # Latest Bash version
 brew "bat"
 brew 'coreutils' # Those that come with macOS are outdated
+brew 'fastfetch'
 brew 'git'
 brew 'grep'
 brew 'htop'
 brew 'lynx'
 brew 'mas' # Mac App Store manager
 brew "n"
-brew 'neofetch'
 brew 'openjdk'
 brew 'powerlevel10k'
 brew 'pv'

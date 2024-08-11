@@ -103,7 +103,7 @@ alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias path='echo -e ${PATH//:/\\n}'
 
 # Displays information about the system
-for command in winfetch neofetch screenfetch; do
+for command in winfetch fastfetch screenfetch; do
     if type $command &> /dev/null; then
         alias sysinfo='$command'
         break
