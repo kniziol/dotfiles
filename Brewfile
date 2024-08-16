@@ -1,6 +1,4 @@
 # Taps
-tap 'homebrew/cask-fonts'
-tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 
 # Binaries
@@ -29,6 +27,7 @@ cask 'docker'
 cask 'duckduckgo'
 cask 'firefox'
 cask 'font-meslo-for-powerlevel10k'
+cask 'font-roboto'
 cask 'gimp'
 cask 'github'
 cask 'google-chrome'
