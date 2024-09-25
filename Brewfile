@@ -16,6 +16,7 @@ brew "n"
 brew 'openjdk'
 brew 'powerlevel10k'
 brew 'pv'
+brew 'speedtest-cli'
 brew 'thefuck'
 brew 'tldr'
 brew "topgrade"

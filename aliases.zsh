@@ -119,6 +119,12 @@ alias firefox='open -a Firefox'
 alias opera='open -a Opera'
 alias safari='open -a Safari'
 
+#
+# Speedtest
+#
+alias st='speedtest-cli --secure'
+alias sts='speedtest-cli --secure --simple'
+
 # Toggles display of desktop icons
 alias hide_desktop_icons='defaults write com.apple.finder CreateDesktop -bool false && killall Finder'
 alias show_desktop_icons='defaults write com.apple.finder CreateDesktop -bool true && killall Finder'
