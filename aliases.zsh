@@ -175,7 +175,6 @@ function update() {
         echo 'Updating packages with Homebrew/Linuxbrew...'
         brew update
         brew upgrade
-        brew cask update
         brew cleanup
     fi
 
