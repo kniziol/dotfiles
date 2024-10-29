@@ -59,6 +59,7 @@ cask 'warp'
 cask 'zoom'
 
 # Fonts
+cask 'font-hack-nerd-font'
 cask 'font-lato'
 cask 'font-open-sans'
 cask 'font-source-code-pro-for-powerline'
