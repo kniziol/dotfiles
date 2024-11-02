@@ -7,6 +7,7 @@ brew "bat"
 brew 'bitwarden-cli'
 brew 'coreutils' # Those that come with macOS are outdated
 brew 'fastfetch'
+brew 'fzf'
 brew 'git'
 brew 'grep'
 brew 'htop'
