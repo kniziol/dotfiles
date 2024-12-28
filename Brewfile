@@ -22,6 +22,7 @@ brew 'thefuck'
 brew 'tldr'
 brew "topgrade"
 brew 'tree'
+brew 'wget'
 
 # Apps
 cask 'discord'
