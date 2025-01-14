@@ -5,6 +5,7 @@ tap 'homebrew/bundle'
 brew 'bash' # Latest Bash version
 brew "bat"
 brew 'bitwarden-cli'
+brew 'cmatrix'
 brew 'coreutils' # Those that come with macOS are outdated
 brew 'fastfetch'
 brew 'fzf'
