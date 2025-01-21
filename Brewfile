@@ -7,6 +7,7 @@ brew "bat"
 brew 'bitwarden-cli'
 brew 'cmatrix'
 brew 'coreutils' # Those that come with macOS are outdated
+brew 'ddev/ddev/ddev'
 brew 'fastfetch'
 brew 'fzf'
 brew 'git'
