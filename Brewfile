@@ -18,6 +18,8 @@ brew "n"
 brew 'openjdk'
 brew 'powerlevel10k'
 brew 'pv'
+brew 'rbenv'
+brew 'ruby-build'
 brew 'speedtest-cli'
 brew 'thefuck'
 brew 'tldr'

@@ -140,3 +140,8 @@ add-zsh-hook preexec check_ssh
 # "It is recommended that you place this command in your .bash_profile, .bashrc, .zshrc or other startup script:"
 # --------
 eval $(thefuck --alias)
+
+# Required by rbenv
+# Initialize rbenv in your shell. On macOS, the best way to manage Ruby versions is using rbenv.
+# --------
+eval "$(rbenv init - zsh)"
