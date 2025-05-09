@@ -76,7 +76,6 @@ print_positive "Homebrew and all formulae updated"
 # https://github.com/Homebrew/homebrew-bundle
 #
 rm -f brewfile.lock.json
-brew tap homebrew/bundle
 brew bundle --file Brewfile
 print_positive "Installed all dependencies and applications using the Homebrew Bundle"
 
