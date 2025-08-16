@@ -19,7 +19,7 @@ brew 'rbenv'
 brew 'ruby-build'
 brew 'speedtest-cli'
 brew 'thefuck'
-brew 'tldr'
+brew 'tlrc'
 brew "topgrade"
 brew 'tree'
 brew 'wget'
