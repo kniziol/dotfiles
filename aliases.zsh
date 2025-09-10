@@ -167,7 +167,7 @@ fi
 # Keeps all apps and packages up to date.
 # Syntax: `update [all]`
 function update() {
-    if command -v softwarepudate &> /dev/null; then
+    if command -v softwareupdate &> /dev/null; then
         echo 'Checking for system updates...'
         softwareupdate -l -i -a
     fi
