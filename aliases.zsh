@@ -213,8 +213,8 @@ function update() {
     if command -v npm &> /dev/null; then
         echo 'Updating Ruby gems...'
         which gem
-        gem update --system
-        gem update
+        sudo gem update --system
+        sudo gem update
         gem cleanup
     fi
 
