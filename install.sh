@@ -93,6 +93,12 @@ sudo n prune
 print_positive "Installed the latest versions of Node.js and npm"
 
 #
+# Install globally the https://www.npmjs.com/package/@aikidosec/safe-chain package
+#
+npm install -g @aikidosec/safe-chain
+print_positive "Installed the @aikidosec/safe-chain package (prevents developers from installing malware on their workstations)"
+
+#
 # Set macOS preferences - we will run this last because this will reload the shell
 #
 source .macos

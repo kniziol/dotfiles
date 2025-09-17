@@ -145,3 +145,6 @@ eval $(thefuck --alias)
 # Initialize rbenv in your shell. On macOS, the best way to manage Ruby versions is using rbenv.
 # --------
 eval "$(rbenv init - zsh)"
+
+# Added by the https://www.npmjs.com/package/@aikidosec/safe-chain package
+source ~/.safe-chain/scripts/init-posix.sh # Safe-chain Zsh initialization script
