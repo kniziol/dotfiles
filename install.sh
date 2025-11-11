@@ -46,6 +46,7 @@ fi
 [ ! -L "$HOME/.p10k.zsh" ] && [ -f "$HOME/.p10k.zsh" ] && mv $HOME/.p10k.zsh $HOME/.p10k.zsh$BACKUP_SUFFIX
 [ ! -L "$HOME/.gitconfig" ] && [ -f "$HOME/.gitconfig" ] && mv $HOME/.gitconfig $HOME/.gitconfig$BACKUP_SUFFIX
 [ ! -L "$HOME/.gitconfig-github" ] && [ -f "$HOME/.gitconfig-github" ] && mv $HOME/.gitconfig-github $HOME/.gitconfig-github$BACKUP_SUFFIX
+[ ! -L "$HOME/.gitconfig-codeberg" ] && [ -f "$HOME/.gitconfig-codeberg" ] && mv $HOME/.gitconfig-codeberg $HOME/.gitconfig-codeberg$BACKUP_SUFFIX
 [ ! -L "$HOME/.gitconfig-meritoo" ] && [ -f "$HOME/.gitconfig-meritoo" ] && mv $HOME/.gitconfig-meritoo $HOME/.gitconfig-meritoo$BACKUP_SUFFIX
 [ ! -L "$HOME/.gitconfig-polcode" ] && [ -f "$HOME/.gitconfig-polcode" ] && mv $HOME/.gitconfig-polcode $HOME/.gitconfig-polcode$BACKUP_SUFFIX
 [ ! -L "$HOME/.gitignore_global" ] && [ -f "$HOME/.gitignore_global" ] && mv $HOME/.gitignore_global $HOME/.gitignore_global$BACKUP_SUFFIX
@@ -58,6 +59,7 @@ ln -sf $DOTFILES/.zshrc $HOME
 ln -sf $DOTFILES/.p10k.zsh $HOME
 ln -sf $DOTFILES/.gitconfig $HOME
 ln -sf $DOTFILES/.gitconfig-github $HOME
+ln -sf $DOTFILES/.gitconfig-codeberg $HOME
 ln -sf $DOTFILES/.gitconfig-meritoo $HOME
 ln -sf $DOTFILES/.gitconfig-polcode $HOME
 ln -sf $DOTFILES/.gitignore_global $HOME

@@ -26,6 +26,8 @@
     path = ~/.gitconfig-meritoo
 [includeIf "gitdir:~/PycharmProjects/polcode/"]
     path = ~/.gitconfig-polcode
+[includeIf "gitdir:~/PycharmProjects/codeberg/"]
+    path = ~/.gitconfig-codeberg
 [includeIf "gitdir:~/WebstormProjects/github/"]
     path = ~/.gitconfig-github
 [alias]
