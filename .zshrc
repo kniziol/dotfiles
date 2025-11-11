@@ -152,3 +152,7 @@ eval "$(rbenv init - zsh)"
 
 # Added by the https://www.npmjs.com/package/@aikidosec/safe-chain package
 source ~/.safe-chain/scripts/init-posix.sh # Safe-chain Zsh initialization script
+
+# Added by LM Studio CLI (lms)
+# --------
+export PATH="$PATH:/Users/kn/.lmstudio/bin"
