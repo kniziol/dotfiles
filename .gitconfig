@@ -16,6 +16,8 @@
 #
 [includeIf "gitdir:~/PhpstormProjects/github/"]
     path = ~/.gitconfig-github
+[includeIf "gitdir:~/PhpstormProjects/codeberg/"]
+    path = ~/.gitconfig-codeberg
 [includeIf "gitdir:~/PhpstormProjects/meritoo/"]
     path = ~/.gitconfig-meritoo
 [includeIf "gitdir:~/PhpstormProjects/polcode/"]
