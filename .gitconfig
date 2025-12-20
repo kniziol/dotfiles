@@ -20,16 +20,16 @@
     path = ~/.gitconfig-meritoo
 [includeIf "gitdir:~/PhpstormProjects/polcode/"]
     path = ~/.gitconfig-polcode
-[includeIf "gitdir:~/WebstormProjects/polcode/"]
-    path = ~/.gitconfig-polcode
+[includeIf "gitdir:~/WebstormProjects/github/"]
+    path = ~/.gitconfig-github
 [includeIf "gitdir:~/WebstormProjects/meritoo/"]
     path = ~/.gitconfig-meritoo
-[includeIf "gitdir:~/PycharmProjects/polcode/"]
+[includeIf "gitdir:~/WebstormProjects/polcode/"]
     path = ~/.gitconfig-polcode
 [includeIf "gitdir:~/PycharmProjects/codeberg/"]
     path = ~/.gitconfig-codeberg
-[includeIf "gitdir:~/WebstormProjects/github/"]
-    path = ~/.gitconfig-github
+[includeIf "gitdir:~/PycharmProjects/polcode/"]
+    path = ~/.gitconfig-polcode
 [alias]
 	#
 	# Better Git Branch output
