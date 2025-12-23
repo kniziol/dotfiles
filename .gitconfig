@@ -1,5 +1,5 @@
 [init]
-    init.defaultBranch = main
+    defaultBranch = main
 [core]
 	excludesfile = ~/.gitignore_global
 	autocrlf = input
