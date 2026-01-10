@@ -55,6 +55,7 @@ function docker-cleanup-all() {
 #
 alias yolo='git commit -m "$(curl -s https://whatthecommit.com/index.txt)"'
 alias gcfu='git branch --no-color --sort=-committerdate --format="%(refname:short)" | fzf --header "git checkout" | xargs git checkout'
+alias gcpa = 'git format-patch --progress -1'
 
 # Displays drives and space in human readable format
 alias dfh='df -h'
