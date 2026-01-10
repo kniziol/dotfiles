@@ -27,7 +27,7 @@ brew 'wget'
 
 # Apps
 cask 'discord'
-cask 'docker'
+cask 'docker-desktop'
 cask 'duckduckgo'
 cask 'elmedia-player'
 cask 'exifcleaner'
