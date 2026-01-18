@@ -13,6 +13,7 @@ brew 'htop'
 brew 'lynx'
 brew 'mas' # Mac App Store manager
 brew "n"
+brew "ni"
 brew "node"
 brew 'openjdk'
 brew 'pnpm'
