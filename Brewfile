@@ -14,6 +14,7 @@ brew 'lynx'
 brew 'mas' # Mac App Store manager
 brew "n"
 brew 'openjdk'
+brew 'pnpm'
 brew 'powerlevel10k'
 brew 'pv'
 brew 'rbenv'
