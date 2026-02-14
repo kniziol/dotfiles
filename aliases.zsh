@@ -208,7 +208,7 @@ function update() {
     fi
 
     if command -v ni &> /dev/null; then
-        echo 'Updating Node.js packages with npm...'
+        echo 'Updating Node.js packages...'
         ni -v
         nup -g
     fi
