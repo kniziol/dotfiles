@@ -88,16 +88,10 @@ brew cleanup
 print_positive "Homebrew cleaned"
 
 #
-# Install Node.js and npm
-#
-sudo n latest
-sudo n prune
-print_positive "Installed the latest versions of Node.js and npm"
-
-#
 # Install globally the https://www.npmjs.com/package/@aikidosec/safe-chain package
 #
 npm install -g @aikidosec/safe-chain
+npm update -g @aikidosec/safe-chain
 print_positive "Installed the @aikidosec/safe-chain package (prevents developers from installing malware on their workstations)"
 
 #
