@@ -207,13 +207,13 @@ function update() {
         fi
     fi
 
-    if command -v npm &> /dev/null; then
+    if command -v ni &> /dev/null; then
         echo 'Updating Node.js packages with npm...'
-        which npm
-        npm update -g
+        ni -v
+        nup -g
     fi
 
-    if command -v npm &> /dev/null; then
+    if command -v gem &> /dev/null; then
         echo 'Updating Ruby gems...'
         which gem
         gem update --system
