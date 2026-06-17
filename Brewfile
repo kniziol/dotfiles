@@ -1,6 +1,6 @@
 # Binaries
 brew 'bash' # Latest Bash version
-brew "bat"
+brew 'bat'
 brew 'cmatrix'
 brew 'coreutils' # Those that come with macOS are outdated
 brew 'ddev/ddev/ddev'
@@ -13,10 +13,10 @@ brew 'grep'
 brew 'htop'
 brew 'lynx'
 brew 'mas' # Mac App Store manager
-brew "n"
-brew "ni"
-brew "node"
-brew "nvim"
+brew 'n'
+brew 'ni'
+brew 'node'
+brew 'nvim'
 brew 'openjdk'
 brew 'pnpm'
 brew 'powerlevel10k'
@@ -26,7 +26,7 @@ brew 'ruby-build'
 brew 'speedtest-cli'
 brew 'thefuck'
 brew 'tlrc'
-brew "topgrade"
+brew 'topgrade'
 brew 'tree'
 brew 'wget'
 
