@@ -15,6 +15,7 @@ brew 'mas' # Mac App Store manager
 brew "n"
 brew "ni"
 brew "node"
+brew "nvim"
 brew 'openjdk'
 brew 'pnpm'
 brew 'powerlevel10k'
