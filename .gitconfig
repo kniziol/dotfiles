@@ -3,7 +3,7 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	autocrlf = input
-	editor = vim
+	editor = nvim
 	# editor = open -a 'Sublime Text' --wait
 [filter "lfs"]
 	required = true
