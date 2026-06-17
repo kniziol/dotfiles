@@ -70,7 +70,7 @@ print_positive "Symlinked files from the ~/.dotfiles directory to the ~/ directo
 # Upgrade any already-installed formulae
 #
 brew update
-brew upgrade
+brew upgrade --no-ask
 print_positive "Homebrew and all formulae updated"
 
 #
