@@ -178,7 +178,7 @@ function update() {
     if command -v brew &> /dev/null; then
         echo 'Updating packages with Homebrew/Linuxbrew...'
         brew update
-        brew upgrade
+        brew upgrade --no-ask
         brew cleanup
     fi
 
