@@ -63,7 +63,6 @@ cask 'tunnelblick'
 cask 'the-unarchiver'
 cask 'tor-browser'
 cask 'vivaldi'
-cask 'warp'
 cask 'zoom'
 
 # Fonts
