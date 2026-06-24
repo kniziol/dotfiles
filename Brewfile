@@ -28,6 +28,7 @@ brew 'tlrc'
 brew 'topgrade'
 brew 'tree'
 brew 'wget'
+brew 'wireguard-tools'
 
 # Apps
 cask 'discord'
@@ -63,7 +64,6 @@ cask 'sublime-text'
 cask 'thaw'
 cask 'the-unarchiver'
 cask 'tor-browser'
-cask 'wireguard-tools'
 cask 'vivaldi'
 cask 'zoom'
 
