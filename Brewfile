@@ -28,7 +28,6 @@ brew 'tlrc'
 brew 'topgrade'
 brew 'tree'
 brew 'wget'
-brew 'wireguard-tools'
 
 # Apps
 cask 'discord'
@@ -81,4 +80,5 @@ mas 'Giphy Capture', id: 668208984
 mas 'little-faker', id: 1609309817
 mas 'Speedtest', id: 1153157709
 mas 'toggl-track-hours-time-log', id: 1291898086
+mas 'WireGuard', id: 1451685025
 mas 'xcode', id: 497799835
