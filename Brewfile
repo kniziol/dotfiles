@@ -63,7 +63,7 @@ cask 'sublime-text'
 cask 'thaw'
 cask 'the-unarchiver'
 cask 'tor-browser'
-cask 'tunnelblick'
+cask 'wireguard-tools'
 cask 'vivaldi'
 cask 'zoom'
 
