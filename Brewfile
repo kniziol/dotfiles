@@ -73,7 +73,6 @@ cask 'font-source-code-pro-for-powerline'
 cask 'font-source-code-pro'
 
 # Mac App Store
-mas 'Amphetamine', id: 937984704
 mas 'Bitwarden', id: 1352778147
 mas 'Giphy Capture', id: 668208984
 mas 'little-faker', id: 1609309817
