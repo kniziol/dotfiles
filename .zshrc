@@ -156,3 +156,11 @@ source ~/.safe-chain/scripts/init-posix.sh # Safe-chain Zsh initialization scrip
 # Added by LM Studio CLI (lms)
 # --------
 export PATH="$PATH:/Users/kn/.lmstudio/bin"
+
+# Added by pnpm
+# --------
+export PNPM_HOME="/Users/kn/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
