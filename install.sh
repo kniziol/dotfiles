@@ -90,8 +90,8 @@ print_positive "Homebrew cleaned"
 #
 # Install globally the https://www.npmjs.com/package/@aikidosec/safe-chain package
 #
-npm install -g @aikidosec/safe-chain
-npm update -g @aikidosec/safe-chain
+pnpm install -g @aikidosec/safe-chain
+pnpm update -g @aikidosec/safe-chain
 print_positive "Installed the @aikidosec/safe-chain package (prevents developers from installing malware on their workstations)"
 
 #
