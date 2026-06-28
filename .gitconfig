@@ -17,23 +17,13 @@
 #
 # Different Git configuration per directory
 #
-[includeIf "gitdir:~/PhpstormProjects/github/"]
-    path = ~/.gitconfig-github
-[includeIf "gitdir:~/PhpstormProjects/codeberg/"]
+[includeIf "gitdir:~/projects/codeberg/"]
     path = ~/.gitconfig-codeberg
-[includeIf "gitdir:~/PhpstormProjects/meritoo/"]
-    path = ~/.gitconfig-meritoo
-[includeIf "gitdir:~/PhpstormProjects/polcode/"]
-    path = ~/.gitconfig-polcode
-[includeIf "gitdir:~/WebstormProjects/github/"]
+[includeIf "gitdir:~/projects/github/"]
     path = ~/.gitconfig-github
-[includeIf "gitdir:~/WebstormProjects/meritoo/"]
+[includeIf "gitdir:~/projects/meritoo/"]
     path = ~/.gitconfig-meritoo
-[includeIf "gitdir:~/WebstormProjects/polcode/"]
-    path = ~/.gitconfig-polcode
-[includeIf "gitdir:~/PycharmProjects/codeberg/"]
-    path = ~/.gitconfig-codeberg
-[includeIf "gitdir:~/PycharmProjects/polcode/"]
+[includeIf "gitdir:~/projects/polcode/"]
     path = ~/.gitconfig-polcode
 [alias]
 	#
