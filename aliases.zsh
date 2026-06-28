@@ -15,7 +15,8 @@ alias cleardns='dscacheutil -flushcache && sudo killall -HUP mDNSResponder'
 # Package managers
 #
 alias composer_install_fresh='rm -rf vendor/ composer.lock && composer install'
-alias npm_install_fresh='rm -rf node_modules/ package-lock.json && npm install'
+alias npm_install_fresh='rm -rf node_modules/ package-lock.json && ni'
+alias pnpm_install_fresh='rm -rf node_modules/ pnpm-lock.yaml && ni'
 
 #
 # Docker
