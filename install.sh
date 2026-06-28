@@ -53,6 +53,13 @@ fi
 print_positive "Created backup of configuration files from the ~/ directory"
 
 #
+# Make a backup of configuration files from the $HOME/.config directory
+# Files only, do not make a backup of symlinks
+#
+[ ! -L "$HOME/.config/ni" ] && [ -f "$HOME/.config/ni" ] && mv $HOME/.config/ni $HOME/.config/ni$BACKUP_SUFFIX
+print_positive "Created backup of configuration files from the ~/.config directory"
+
+#
 # Symlink files from the ~/.dotfiles into the $HOME directory
 #
 ln -sf $DOTFILES/.zshrc $HOME
@@ -64,6 +71,12 @@ ln -sf $DOTFILES/.gitconfig-meritoo $HOME
 ln -sf $DOTFILES/.gitconfig-polcode $HOME
 ln -sf $DOTFILES/.gitignore_global $HOME
 print_positive "Symlinked files from the ~/.dotfiles directory to the ~/ directory"
+
+#
+# Symlink files from the ~/.dotfiles/.config into the $HOME/.config directory
+#
+ln -sf $DOTFILES/.config/ni $HOME/.config
+print_positive "Symlinked files from the ~/.dotfiles/.config directory to the ~/.config directory"
 
 #
 # Make sure we’re using the latest Homebrew
