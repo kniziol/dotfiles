@@ -56,7 +56,7 @@ print_positive "Created backup of configuration files from the ~/ directory"
 # Make a backup of configuration files from the $HOME/.config directory
 # Files only, do not make a backup of symlinks
 #
-[ ! -L "$HOME/.config/ni" ] && [ -f "$HOME/.config/ni" ] && mv $HOME/.config/ni $HOME/.config/ni$BACKUP_SUFFIX
+[ ! -L "$HOME/.config/ni" ] && [ -d "$HOME/.config/ni" ] && mv $HOME/.config/ni $HOME/.config/ni$BACKUP_SUFFIX
 print_positive "Created backup of configuration files from the ~/.config directory"
 
 #
