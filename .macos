@@ -129,6 +129,15 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 #sudo rm -rf /System/Library/CoreServices/DefaultDesktop.jpg
 #sudo ln -s /path/to/your/image /System/Library/CoreServices/DefaultDesktop.jpg
 
+# Set windows corner radius
+defaults write -g NSConvolutionOverride1 -float 10
+
+# Set sidebar corner radius
+#defaults write -g NSSplitViewItemGlassMinimumCornerRadius -float 10
+
+# Disable the floating sidebar
+defaults write -g NSSplitViewItemSidebarDefaultsToFloatingAppearance -bool false
+
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
