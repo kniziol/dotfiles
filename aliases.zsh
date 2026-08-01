@@ -15,7 +15,8 @@ alias cleardns='dscacheutil -flushcache && sudo killall -HUP mDNSResponder'
 # Package managers
 #
 alias composer_install_fresh='rm -rf vendor/ composer.lock && composer install'
-alias npm_install_fresh='rm -rf node_modules/ package-lock.json && npm install'
+alias npm_install_fresh='rm -rf node_modules/ package-lock.json && ni'
+alias pnpm_install_fresh='rm -rf node_modules/ pnpm-lock.yaml && ni'
 
 #
 # Docker
@@ -25,6 +26,7 @@ alias dcl='docker compose logs -f'
 alias dcr='docker compose run --rm'
 alias dcp='docker compose ps --all'
 alias dcu='docker compose up -d'
+alias dcue='docker compose --env-file .env --env-file .env.local up -d && dcp'
 alias dcd='docker compose down'
 alias dcs='docker compose start && dcp'
 alias dcsps='docker compose stop'
@@ -53,8 +55,10 @@ function docker-cleanup-all() {
 #
 # Git
 #
-alias yolo='git commit -m "$(curl -s http://whatthecommit.com/index.txt)"'
+alias yolo='git commit -m "$(curl -s https://whatthecommit.com/index.txt)"'
 alias gcfu='git branch --no-color --sort=-committerdate --format="%(refname:short)" | fzf --header "git checkout" | xargs git checkout'
+alias gfpa='git format-patch --progress -1'
+alias gbsh='git branch --show-current'
 
 # Displays drives and space in human readable format
 alias dfh='df -h'
@@ -167,7 +171,7 @@ fi
 # Keeps all apps and packages up to date.
 # Syntax: `update [all]`
 function update() {
-    if command -v softwarepudate &> /dev/null; then
+    if command -v softwareupdate &> /dev/null; then
         echo 'Checking for system updates...'
         softwareupdate -l -i -a
     fi
@@ -175,7 +179,7 @@ function update() {
     if command -v brew &> /dev/null; then
         echo 'Updating packages with Homebrew/Linuxbrew...'
         brew update
-        brew upgrade
+        brew upgrade --no-ask
         brew cleanup
     fi
 
@@ -204,13 +208,13 @@ function update() {
         fi
     fi
 
-    if command -v npm &> /dev/null; then
-        echo 'Updating Node.js packages with npm...'
-        which npm
-        npm update -g
+    if command -v ni &> /dev/null; then
+        echo 'Updating Node.js packages...'
+        ni -v
+        nup -g
     fi
 
-    if command -v npm &> /dev/null; then
+    if command -v gem &> /dev/null; then
         echo 'Updating Ruby gems...'
         which gem
         gem update --system

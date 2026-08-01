@@ -80,6 +80,10 @@ ZSH_CUSTOM=$DOTFILES
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+#
+# See other plugins:
+# https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
+#
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
@@ -140,3 +144,28 @@ add-zsh-hook preexec check_ssh
 # "It is recommended that you place this command in your .bash_profile, .bashrc, .zshrc or other startup script:"
 # --------
 eval $(thefuck --alias)
+
+# Required by rbenv
+# Initialize rbenv in your shell. On macOS, the best way to manage Ruby versions is using rbenv.
+# --------
+eval "$(rbenv init - zsh)"
+
+# Added by the https://www.npmjs.com/package/@aikidosec/safe-chain package
+source ~/.safe-chain/scripts/init-posix.sh # Safe-chain Zsh initialization script
+
+# Added by LM Studio CLI (lms)
+# --------
+export PATH="$PATH:/Users/kn/.lmstudio/bin"
+
+# Added by pnpm
+# --------
+export PNPM_HOME="/Users/kn/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+
+# ni configuration
+# https://github.com/antfu-collective/ni
+# --------
+export NI_CONFIG_FILE="$HOME/.config/ni/nirc"
