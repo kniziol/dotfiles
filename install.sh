@@ -46,10 +46,18 @@ fi
 [ ! -L "$HOME/.p10k.zsh" ] && [ -f "$HOME/.p10k.zsh" ] && mv $HOME/.p10k.zsh $HOME/.p10k.zsh$BACKUP_SUFFIX
 [ ! -L "$HOME/.gitconfig" ] && [ -f "$HOME/.gitconfig" ] && mv $HOME/.gitconfig $HOME/.gitconfig$BACKUP_SUFFIX
 [ ! -L "$HOME/.gitconfig-github" ] && [ -f "$HOME/.gitconfig-github" ] && mv $HOME/.gitconfig-github $HOME/.gitconfig-github$BACKUP_SUFFIX
+[ ! -L "$HOME/.gitconfig-codeberg" ] && [ -f "$HOME/.gitconfig-codeberg" ] && mv $HOME/.gitconfig-codeberg $HOME/.gitconfig-codeberg$BACKUP_SUFFIX
 [ ! -L "$HOME/.gitconfig-meritoo" ] && [ -f "$HOME/.gitconfig-meritoo" ] && mv $HOME/.gitconfig-meritoo $HOME/.gitconfig-meritoo$BACKUP_SUFFIX
 [ ! -L "$HOME/.gitconfig-polcode" ] && [ -f "$HOME/.gitconfig-polcode" ] && mv $HOME/.gitconfig-polcode $HOME/.gitconfig-polcode$BACKUP_SUFFIX
 [ ! -L "$HOME/.gitignore_global" ] && [ -f "$HOME/.gitignore_global" ] && mv $HOME/.gitignore_global $HOME/.gitignore_global$BACKUP_SUFFIX
 print_positive "Created backup of configuration files from the ~/ directory"
+
+#
+# Make a backup of configuration files from the $HOME/.config directory
+# Files only, do not make a backup of symlinks
+#
+[ ! -L "$HOME/.config/ni" ] && [ -d "$HOME/.config/ni" ] && mv $HOME/.config/ni $HOME/.config/ni$BACKUP_SUFFIX
+print_positive "Created backup of configuration files from the ~/.config directory"
 
 #
 # Symlink files from the ~/.dotfiles into the $HOME directory
@@ -58,17 +66,24 @@ ln -sf $DOTFILES/.zshrc $HOME
 ln -sf $DOTFILES/.p10k.zsh $HOME
 ln -sf $DOTFILES/.gitconfig $HOME
 ln -sf $DOTFILES/.gitconfig-github $HOME
+ln -sf $DOTFILES/.gitconfig-codeberg $HOME
 ln -sf $DOTFILES/.gitconfig-meritoo $HOME
 ln -sf $DOTFILES/.gitconfig-polcode $HOME
 ln -sf $DOTFILES/.gitignore_global $HOME
 print_positive "Symlinked files from the ~/.dotfiles directory to the ~/ directory"
 
 #
+# Symlink files from the ~/.dotfiles/.config into the $HOME/.config directory
+#
+ln -sf $DOTFILES/.config/ni $HOME/.config
+print_positive "Symlinked files from the ~/.dotfiles/.config directory to the ~/.config directory"
+
+#
 # Make sure we’re using the latest Homebrew
 # Upgrade any already-installed formulae
 #
 brew update
-brew upgrade
+brew upgrade --no-ask
 print_positive "Homebrew and all formulae updated"
 
 #
@@ -76,7 +91,6 @@ print_positive "Homebrew and all formulae updated"
 # https://github.com/Homebrew/homebrew-bundle
 #
 rm -f brewfile.lock.json
-brew tap homebrew/bundle
 brew bundle --file Brewfile
 print_positive "Installed all dependencies and applications using the Homebrew Bundle"
 
@@ -87,11 +101,11 @@ brew cleanup
 print_positive "Homebrew cleaned"
 
 #
-# Install Node.js and npm
+# Install globally the https://www.npmjs.com/package/@aikidosec/safe-chain package
 #
-sudo n latest
-sudo n prune
-print_positive "Installed the latest versions of Node.js and npm"
+pnpm install -g @aikidosec/safe-chain
+pnpm update -g @aikidosec/safe-chain
+print_positive "Installed the @aikidosec/safe-chain package (prevents developers from installing malware on their workstations)"
 
 #
 # Set macOS preferences - we will run this last because this will reload the shell

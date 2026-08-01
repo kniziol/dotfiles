@@ -1,7 +1,10 @@
+[init]
+    defaultBranch = main
 [core]
 	excludesfile = ~/.gitignore_global
 	autocrlf = input
-	editor = open -a 'Sublime Text' --wait
+	editor = nvim
+	# editor = open -a 'Sublime Text' --wait
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
@@ -14,18 +17,14 @@
 #
 # Different Git configuration per directory
 #
-[includeIf "gitdir:~/PhpstormProjects/github/"]
+[includeIf "gitdir:~/projects/codeberg/"]
+    path = ~/.gitconfig-codeberg
+[includeIf "gitdir:~/projects/github/"]
     path = ~/.gitconfig-github
-[includeIf "gitdir:~/PhpstormProjects/meritoo/"]
+[includeIf "gitdir:~/projects/meritoo/"]
     path = ~/.gitconfig-meritoo
-[includeIf "gitdir:~/PhpstormProjects/polcode/"]
+[includeIf "gitdir:~/projects/polcode/"]
     path = ~/.gitconfig-polcode
-[includeIf "gitdir:~/WebstormProjects/polcode/"]
-    path = ~/.gitconfig-polcode
-[includeIf "gitdir:~/PycharmProjects/polcode/"]
-    path = ~/.gitconfig-polcode
-[includeIf "gitdir:~/WebstormProjects/github/"]
-    path = ~/.gitconfig-github
 [alias]
 	#
 	# Better Git Branch output
