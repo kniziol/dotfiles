@@ -169,3 +169,9 @@ esac
 # https://github.com/antfu-collective/ni
 # --------
 export NI_CONFIG_FILE="$HOME/.config/ni/nirc"
+
+# make configuration
+# If you need to use it as "make", you can add a "gnubin" directory to your PATH
+# https://formulae.brew.sh/formula/make
+# --------
+export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"

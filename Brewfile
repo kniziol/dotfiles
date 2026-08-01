@@ -11,6 +11,7 @@ brew 'git-lfs'
 brew 'grep'
 brew 'htop'
 brew 'lynx'
+brew 'make'
 brew 'mas' # Mac App Store manager
 brew 'n'
 brew 'ni'
