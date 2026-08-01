@@ -125,10 +125,10 @@ alias opera='open -a Opera'
 alias safari='open -a Safari'
 
 #
-# Speedtest
+# Network bandwidth test
 #
-alias st='speedtest-cli --secure'
-alias sts='speedtest-cli --secure --simple'
+alias nb='networkQuality -s'
+alias nbq='networkQuality -s -M 15' # quick, 15-second test
 
 # Toggles display of desktop icons
 alias hide_desktop_icons='defaults write com.apple.finder CreateDesktop -bool false && killall Finder'
