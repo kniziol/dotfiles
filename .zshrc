@@ -175,3 +175,8 @@ export NI_CONFIG_FILE="$HOME/.config/ni/nirc"
 # https://formulae.brew.sh/formula/make
 # --------
 export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
+
+# Added by Ollama CLI (lms)
+# Hermes Agent command
+# --------
+case ":$PATH:" in *":$HOME/.local/bin:"*) ;; *) export PATH="$HOME/.local/bin:$PATH" ;; esac
