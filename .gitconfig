@@ -13,7 +13,7 @@
 [color]
 	ui = true
 [commit]
-	template = /Users/kn/.stCommitMsg
+	template = ~/.stCommitMsg
 #
 # Different Git configuration per directory
 #
