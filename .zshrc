@@ -180,3 +180,8 @@ export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
 # Hermes Agent command
 # --------
 case ":$PATH:" in *":$HOME/.local/bin:"*) ;; *) export PATH="$HOME/.local/bin:$PATH" ;; esac
+
+# Added by kn while working on .NET project
+# .NET Core SDK tools
+# --------
+export PATH="$PATH:$HOME/.dotnet/tools"
