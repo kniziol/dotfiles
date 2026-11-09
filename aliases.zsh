@@ -189,6 +189,15 @@ function update() {
             echo 'Updating App Store applications...'
             mas upgrade
         fi
+
+        if command -v ollama &> /dev/null; then
+            echo 'Updating all Ollama models...'
+
+            ollama list | tail -n +2 | awk '{print $1}' | while read -r model; do
+                echo "-> $model"
+                ollama pull "$model"
+            done
+        fi
     fi
 
     if ! [[ "$OSTYPE" =~ ^darwin ]]; then
