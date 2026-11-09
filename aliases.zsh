@@ -191,6 +191,7 @@ function update() {
         fi
 
         if command -v ollama &> /dev/null; then
+            curl -s http://localhost:11434 > /dev/null 2>&1 || { echo "Starting Ollama..."; ollama serve &; }
             echo 'Updating all Ollama models...'
 
             ollama list | tail -n +2 | awk '{print $1}' | while read -r model; do
