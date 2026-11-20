@@ -120,7 +120,6 @@ done
 # Web browsers, e.g. opens file/URL in a particular browser
 #
 alias chrome='open -a Google\ Chrome'
-alias edge='open -a Microsoft\ Edge'
 alias firefox='open -a Firefox'
 alias opera='open -a Opera'
 alias safari='open -a Safari'
