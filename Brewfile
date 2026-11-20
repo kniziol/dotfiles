@@ -34,7 +34,6 @@ brew 'wget'
 # Apps
 cask 'discord'
 cask 'docker-desktop'
-cask 'duckduckgo'
 cask 'elmedia-player'
 cask 'firefox'
 cask 'ghostty'
