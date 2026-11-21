@@ -171,71 +171,78 @@ fi
 # Keeps all apps and packages up to date.
 # Syntax: `update [all]`
 function update() {
-    if command -v softwareupdate &> /dev/null; then
-        echo 'Checking for system updates...'
-        softwareupdate -l -i -a
-    fi
+    if command -v topgrade &> /dev/null; then
+        echo 'Updating all packages with topgrade...'
+        topgrade --cleanup
+    else
+        echo 'Running update in an old-style way. Consider installing the topgrade tool for a better experience.'
 
-    if command -v brew &> /dev/null; then
-        echo 'Updating packages with Homebrew/Linuxbrew...'
-        brew update
-        brew upgrade --no-ask
-        brew cleanup
-    fi
-
-    if [[ "$1" == 'all' ]]; then
-        if command -v mas &> /dev/null; then
-            echo 'Updating App Store applications...'
-            mas upgrade
+        if command -v softwareupdate &> /dev/null; then
+            echo 'Checking for system updates...'
+            softwareupdate -l -i -a
         fi
 
-        if command -v ollama &> /dev/null; then
-            curl -s http://localhost:11434 > /dev/null 2>&1 || { echo "Starting Ollama..."; ollama serve &; }
-            echo 'Updating all Ollama models...'
-
-            ollama list | tail -n +2 | awk '{print $1}' | while read -r model; do
-                echo "-> $model"
-                ollama pull "$model"
-            done
-        fi
-    fi
-
-    if ! [[ "$OSTYPE" =~ ^darwin ]]; then
-        if command -v apt &> /dev/null; then
-            echo 'Updating packages with apt...'
-            apt update
-            apt full-upgrade
-            apt autoremove
-            apt clean
-            apt autoclean
+        if command -v brew &> /dev/null; then
+            echo 'Updating packages with Homebrew/Linuxbrew...'
+            brew update
+            brew upgrade --no-ask
+            brew cleanup
         fi
 
-        if command -v apt-get &> /dev/null; then
-            echo 'Updating packages with apt-get...'
-            apt-get update
-            apt-get upgrade
-            apt-get dist-upgrade
+        if [[ "$1" == 'all' ]]; then
+            if command -v mas &> /dev/null; then
+                echo 'Updating App Store applications...'
+                mas upgrade
+            fi
+
+            if command -v ollama &> /dev/null; then
+                curl -s http://localhost:11434 > /dev/null 2>&1 || { echo "Starting Ollama..."; ollama serve &; }
+                echo 'Updating all Ollama models...'
+
+                ollama list | tail -n +2 | awk '{print $1}' | while read -r model; do
+                    echo "-> $model"
+                    ollama pull "$model"
+                done
+            fi
         fi
-    fi
 
-    if command -v ni &> /dev/null; then
-        echo 'Updating Node.js packages...'
-        ni -v
-        nup -g
-    fi
+        if ! [[ "$OSTYPE" =~ ^darwin ]]; then
+            if command -v apt &> /dev/null; then
+                echo 'Updating packages with apt...'
+                apt update
+                apt full-upgrade
+                apt autoremove
+                apt clean
+                apt autoclean
+            fi
 
-    if command -v gem &> /dev/null; then
-        echo 'Updating Ruby gems...'
-        which gem
-        gem update --system
-        gem update
-        gem cleanup
-    fi
+            if command -v apt-get &> /dev/null; then
+                echo 'Updating packages with apt-get...'
+                apt-get update
+                apt-get upgrade
+                apt-get dist-upgrade
+            fi
+        fi
 
-    if command -v omz &> /dev/null; then
-        echo 'Updating Oh My Zsh...'
-        omz update
-        omz reload
+        if command -v ni &> /dev/null; then
+            echo 'Updating Node.js packages...'
+            ni -v
+            nup -g
+        fi
+
+        if command -v gem &> /dev/null; then
+            echo 'Updating Ruby gems...'
+            which gem
+            gem update --system
+            gem update
+            gem cleanup
+        fi
+
+        if command -v omz &> /dev/null; then
+            echo 'Updating Oh My Zsh...'
+            omz update
+            omz reload
+        fi
     fi
 }
 
