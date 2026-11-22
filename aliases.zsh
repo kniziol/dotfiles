@@ -173,7 +173,7 @@ fi
 function update() {
     if command -v topgrade &> /dev/null; then
         echo 'Updating all packages with topgrade...'
-        topgrade --cleanup
+        topgrade --yes brew_formula brew_cask
     else
         echo 'Running update in an old-style way. Consider installing the topgrade tool for a better experience.'
 
