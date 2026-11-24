@@ -1,0 +1,35 @@
+[misc]
+
+# Cleanup temporary or old files (default: false)
+cleanup = true
+
+# containers = ["archlinux-latest"]
+[containers]
+# Specify the containers to ignore while updating (Wildcard supported)
+# ignored_containers = ["ghcr.io/rancher-sandbox/rancher-desktop/rdx-proxy:latest", "docker.io*"]
+# Specify the runtime to use for containers (default: "docker", allowed values: "docker", "podman")
+# runtime = "podman"
+
+ignored_containers = [
+  "*-built*",
+  "*/*-built*",
+  "*-local*",
+  #
+  # Autocreated by IDEs
+  #
+  "phpstorm_helpers*",
+  "pycharm_helpers*",
+  #
+  # Projects
+  #
+  "agilify*",
+  "booking-system-api*",
+  "gallerystore*",
+  "inspirational-quotes-app*",
+  "local-runner*",
+  "php-reflection*",
+  "python-crud*",
+  "python-web-app*",
+  "reflection*",
+  "showroomhq*",
+]

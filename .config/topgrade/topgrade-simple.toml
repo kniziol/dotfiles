@@ -1,0 +1,13 @@
+[misc]
+
+# Disable specific steps - same options as the command line flag
+disable = [
+    "claude_code",
+    "claude_code_plugins",
+    "containers",
+    "hermes_agent",
+    "mas",
+    "ollama",
+    "opencode",
+    "system",
+]

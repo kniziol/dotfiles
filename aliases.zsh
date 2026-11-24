@@ -173,7 +173,12 @@ fi
 function update() {
     if command -v topgrade &> /dev/null; then
         echo 'Updating all packages with topgrade...'
-        topgrade --yes brew_formula brew_cask
+
+        if [[ "$1" == 'all' ]]; then
+            topgrade --yes brew_formula brew_cask
+        else
+            topgrade --yes brew_formula brew_cask --config $HOME/.config/topgrade/topgrade-simple.toml
+        fi
     else
         echo 'Running update in an old-style way. Consider installing the topgrade tool for a better experience.'
 

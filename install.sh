@@ -57,6 +57,8 @@ print_positive "Created backup of configuration files from the ~/ directory"
 # Files only, do not make a backup of symlinks
 #
 [ ! -L "$HOME/.config/ni" ] && [ -d "$HOME/.config/ni" ] && mv $HOME/.config/ni $HOME/.config/ni$BACKUP_SUFFIX
+[ ! -L "$HOME/.config/topgrade" ] && [ -d "$HOME/.config/topgrade" ] && mv $HOME/.config/topgrade $HOME/.config/topgrade$BACKUP_SUFFIX
+[ ! -L "$HOME/.config/topgrade.d" ] && [ -d "$HOME/.config/topgrade.d" ] && mv $HOME/.config/topgrade.d $HOME/.config/topgrade.d$BACKUP_SUFFIX
 print_positive "Created backup of configuration files from the ~/.config directory"
 
 #
@@ -76,6 +78,8 @@ print_positive "Symlinked files from the ~/.dotfiles directory to the ~/ directo
 # Symlink files from the ~/.dotfiles/.config into the $HOME/.config directory
 #
 ln -sf $DOTFILES/.config/ni $HOME/.config
+ln -sf $DOTFILES/.config/topgrade $HOME/.config/topgrade
+ln -sf $DOTFILES/.config/topgrade.d $HOME/.config/topgrade.d
 print_positive "Symlinked files from the ~/.dotfiles/.config directory to the ~/.config directory"
 
 #
