@@ -78,8 +78,8 @@ print_positive "Symlinked files from the ~/.dotfiles directory to the ~/ directo
 # Symlink files from the ~/.dotfiles/.config into the $HOME/.config directory
 #
 ln -sf $DOTFILES/.config/ni $HOME/.config
-ln -sf $DOTFILES/.config/topgrade $HOME/.config/topgrade
-ln -sf $DOTFILES/.config/topgrade.d $HOME/.config/topgrade.d
+ln -sf $DOTFILES/.config/topgrade $HOME/.config
+ln -sf $DOTFILES/.config/topgrade.d $HOME/.config
 print_positive "Symlinked files from the ~/.dotfiles/.config directory to the ~/.config directory"
 
 #
