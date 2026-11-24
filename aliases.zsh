@@ -172,11 +172,11 @@ fi
 # Syntax: `update [all]`
 function update() {
     if command -v topgrade &> /dev/null; then
-        echo 'Updating all packages with topgrade...'
-
         if [[ "$1" == 'all' ]]; then
+            echo 'Updating all packages with topgrade...'
             topgrade --yes brew_formula brew_cask
         else
+            echo 'Updating packages with topgrade...'
             topgrade --yes brew_formula brew_cask --config $HOME/.config/topgrade/topgrade-simple.toml
         fi
     else
